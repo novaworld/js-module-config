@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Default modules configuration",
   "repository": "https://github.com/novaworld/js-module-config",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "keywords": [
     "react",
@@ -15,11 +15,22 @@
   ],
   "authors": "Truong Thanh Tung <ttungbmt@gmail.com> (https://github.com/ttungbmt)",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "build": "rollup -c"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-filesize": "^6.1.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-progress": "^1.1.1",
+    "rollup-plugin-terser": "^5.1.1"
+  },
   "files": [
     "dist",
     "src"

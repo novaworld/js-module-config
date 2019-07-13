@@ -1,5 +1,5 @@
-const {rollup} = require('./rollup') 
+import {rollup} from './rollup/rollup'
 
-module.exports = {
+export {
     rollup
 }

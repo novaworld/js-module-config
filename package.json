@@ -1,6 +1,6 @@
 {
   "name": "@ttungbmt/module-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Default modules configuration",
   "repository": "https://github.com/novaworld/js-module-config",
   "main": "dist/index.js",

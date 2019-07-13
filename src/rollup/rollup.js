@@ -1,4 +1,5 @@
 import nodeResolve from 'rollup-plugin-node-resolve'
+import replace from 'rollup-plugin-replace';
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
@@ -20,6 +21,9 @@ const commonPlugins = [
         runtimeHelpers: true,
     }), //Place babel before commonjs plugin.
     commonjs(),
+    replace({
+        'process.env.NODE_ENV': JSON.stringify(env),
+    }),
     progress(),
     filesize(),
 ];

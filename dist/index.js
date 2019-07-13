@@ -5,6 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var nodeResolve = _interopDefault(require('rollup-plugin-node-resolve'));
+var replace = _interopDefault(require('rollup-plugin-replace'));
 var babel = _interopDefault(require('rollup-plugin-babel'));
 var commonjs = _interopDefault(require('rollup-plugin-commonjs'));
 var rollupPluginTerser = require('rollup-plugin-terser');
@@ -79,7 +80,9 @@ const commonPlugins = [nodeResolve(), babel({
   // only transpile our source code
   runtimeHelpers: true
 }), //Place babel before commonjs plugin.
-commonjs(), progress(), filesize()];
+commonjs(), replace({
+  'process.env.NODE_ENV': JSON.stringify(env)
+}), progress(), filesize()];
 
 const rollup = (input, output, options = {}) => {
   const {

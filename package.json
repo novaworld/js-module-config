@@ -1,0 +1,28 @@
+{
+  "name": "@ttungbmt/module-config",
+  "version": "0.0.1",
+  "description": "Default modules configuration",
+  "repository": "https://github.com/novaworld/js-module-config",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "vue",
+    "module",
+    "config",
+    "rollup",
+    "webpack"
+  ],
+  "authors": "Truong Thanh Tung <ttungbmt@gmail.com> (https://github.com/ttungbmt)",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false
+}
